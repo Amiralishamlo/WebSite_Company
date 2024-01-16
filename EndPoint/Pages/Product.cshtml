@@ -1,0 +1,61 @@
+﻿@page
+@model EndPoint.Pages.ProductModel
+@{
+    ViewData["Title"]= "Product";
+}
+
+<!-- Shop Detail Start -->
+<br />
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container pb50">
+    <div class="row">
+        <div class="col-md-12 mb40">
+            <article>
+                <img src="~/ProductPictures/@Model.Product.Picture" alt="@Model.Product.PictureAlt" title="@Model.Product.PictureTitle" class="mb30 col-md-12 img-rounded">
+                <div class="post-content">
+                    <h3>@Model.Product.Name</h3>
+                    <ul class="post-meta list-inline">
+                        <li class="list-inline-item">
+                            <i class="fa fa-tags"></i> <a href="#">@Model.Product.Category</a>
+                        </li>
+                    </ul>
+                    <p class="lead">@Html.Raw(Model.Product.Description)</p>
+                    <ul class="list-inline share-buttons">
+                        <li class="list-inline-item">Share Post:</li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon-sm si-dark si-colored-facebook si-gray-round">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon-sm si-dark si-colored-twitter si-gray-round">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="social-icon-sm si-dark si-colored-linkedin si-gray-round">
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <hr class="mb40">
+                    <h4 class="mb40 text-uppercase font500">About Author</h4>
+                    <div class="media mb40">
+                        <img src="~/Theme/img/promotion.webp" width="120px" height="120px" class="mr-4 rounded-circle"/>
+                        <div class="media-body">
+                            <h5 class="mt-0 font700">Jane Doe</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+                    <hr class="mb40">
+                </div>
+            </article>
+            <!-- post article-->
+
+        </div>
+    </div>
+</div>
+@await Component.InvokeAsync("LatestArrivals")
+@await Component.InvokeAsync("Form")

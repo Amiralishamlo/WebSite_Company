@@ -1,0 +1,81 @@
+﻿@using _0_Framework.Application;
+@using _0_Framework.Infrastructure;
+<div class="left side-menu">
+    <div class="sidebar-inner slimscrollleft">
+        <div class="user-details">
+            <div class="pull-right">
+                <img src="~/Theme/img/promotion.webp" alt="" class="thumb-md img-circle">
+            </div>
+            <div class="user-info">
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        کمیل محسنی <span class="caret"></span>
+                    </a>
+                </div>
+
+                <p class="text-muted m-0">ادمین</p>
+            </div>
+        </div>
+        <!--- Divider -->
+        <div id="sidebar-menu">
+            <ul>
+                <li>
+                    <a asp-page="/Index" class="waves-effect active">
+                        <i class="md md-home"></i><span> داشبورد </span>
+                    </a>
+                </li>
+               
+
+                    <li class="has_sub">
+                        <a class="waves-effect">
+                            <i class="md md-mail"></i><span> تنظیمات سایت </span>
+                            <span class="pull-right">
+                                <i class="md md-add"></i>
+                            </span>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a asp-page="/Shop/Slides/Index">اسلایدر</a>
+                            </li>
+                            <li>
+                                <a asp-page="/Shop/Films/Index">ویدیو</a>
+                            </li>
+                            <li>
+                                <a asp-page="/Shop/ProductCategories/Index">گروه محصولات</a>
+                            </li>
+                            <li>
+                                <a asp-page="/Shop/Products/Index">محصولات</a>
+                            </li>
+                        </ul>
+                    </li>
+                  
+                    
+                
+                <li class="has_sub">
+                    <a class="waves-effect">
+                        <i class="md md-mail"></i><span> سیستم بلاگینگ </span>
+                        <span class="pull-right">
+                            <i class="md md-add"></i>
+                        </span>
+                    </a>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a asp-page="/Blog/Articles/Index">مقالات</a>
+                        </li>
+                        <li>
+                            <a asp-page="/Blog/ArticleCategories/Index">گروه مقالات</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a asp-page="/Account" asp-page-handler="Logout" class="waves-effect active">
+                        <i class="fa fa-sign-out"></i><span> خروج </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
