@@ -57,7 +57,7 @@ public class ProductQuery : IProductQuery
                 PictureAlt = product.PictureAlt,
                 PictureTitle = product.PictureTitle,
                 Slug = product.Slug
-            }).AsNoTracking().OrderByDescending(x => x.Id).Take(6).ToList();
+            }).AsNoTracking().OrderByDescending(x => x.Id).Take(10).ToList();
 
         
 

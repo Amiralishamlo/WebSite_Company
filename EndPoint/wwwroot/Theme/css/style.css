@@ -10974,12 +10974,17 @@ h6,
     position: -webkit-sticky;
     position: sticky;
     bottom: 60px;
-    z-index:100;
+    z-index: 100;
 }
-
 .img-what {
     width: 120px;
     height: 120px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    max-width: 90%;
+}
+.img-what:hover {
+    transform: scale(1.3) rotate(5deg);
 }
 @media (max-width: 720px) {
     .img-what {

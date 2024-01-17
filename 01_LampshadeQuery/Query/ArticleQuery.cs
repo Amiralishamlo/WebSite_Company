@@ -37,7 +37,7 @@ public class ArticleQuery : IArticleQuery
                 Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
-                PublishDate = x.PublishDate.ToFarsi(),
+                PublishDate = x.PublishDate.ToDiscountFormat(),
                 ShortDescription = x.ShortDescription
             }).FirstOrDefault(x => x.Slug == slug);
 
